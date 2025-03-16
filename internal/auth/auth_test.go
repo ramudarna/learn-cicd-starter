@@ -30,7 +30,7 @@ func TestGetAPIKey(t *testing.T) {
 		{
 			name: "valid auth header",
 			setupRequest: func(r *http.Request) {
-				r.Header.Set("Authorization", "ApiKey test-api-key")
+				r.Header.Set("Authorization", "Bearer test-api-key")
 			},
 			want:    "test-api-key",
 			wantErr: false,
