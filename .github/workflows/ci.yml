@@ -36,4 +36,4 @@ jobs:
         run: test -z $(go fmt ./...)
 
       - name: Run staticcheck
-        run: staticcheck ./...
+        run: test -z $(staticcheck ./...)
