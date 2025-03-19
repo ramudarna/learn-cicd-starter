@@ -29,6 +29,9 @@ jobs:
       - name: Install staticcheck
         run: go install honnef.co/go/tools/cmd/staticcheck@latest
 
+      - name: Set up PATH for Go tools
+        run: echo "${HOME}/go/bin" >> $GITHUB_PATH
+
       - name: Style
         run: test -z $(go fmt ./...)
 
